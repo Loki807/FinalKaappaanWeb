@@ -1,0 +1,172 @@
+@import "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css";
+
+/* ================================
+   GLOBAL THEME (White + Deep Red)
+================================ */
+.login-page {
+  min-height: 100vh;
+  background:  #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 15px;
+  font-family: "Poppins", sans-serif;
+  color: #5C0000;
+  position: relative;
+}
+
+/* Soft red background pattern */
+.login-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #ffe8e8, #FFFFFF);
+  z-index: 0;
+}
+
+/* ================================
+   LOGIN CARD
+================================ */
+.login-card {
+  position: relative;
+  z-index: 2;
+  background: #5C0000;
+  border: 1px solid rgba(0,0,0,0.07);
+  padding: 40px 45px;
+  border-radius: 16px;
+  max-width: 380px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.08);
+  animation: fadeUp 0.9s ease;
+}
+
+/* Logo */
+.logo {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+/* Heading */
+.login-card h2 {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #f5cccc;
+  margin-bottom: 22px;
+}
+
+/* ================================
+   FORM INPUTS
+================================ */
+.form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+label {
+  text-align: left;
+  font-size: 0.9rem;
+  color: #f5cccc;
+  margin-bottom: -6px;
+  font-weight: 600;
+}
+
+input {
+  padding: 11px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.15);
+  background: #ffffff;
+  font-size: 1rem;
+  transition: 0.3s ease;
+  color: #5C0000;
+}
+
+input:focus {
+  border-color: #A00101;
+  box-shadow: 0 0 8px rgba(160, 1, 1, 0.3);
+}
+
+/* Invalid style */
+input.ng-touched.ng-invalid {
+  border: 2px solid #FF1A1A !important;
+  background: #FFF0F0 !important;
+}
+
+/* Error text */
+.error {
+  color: #FF1A1A;
+  font-size: 0.85rem;
+  margin-top: -4px;
+  font-weight: 600;
+}
+
+/* ================================
+   LOGIN BUTTON
+================================ */
+button {
+  margin-top: 10px;
+  background: #A00101;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 6px 18px rgba(255, 26, 26, 0.25);
+}
+
+button:hover {
+  background: #5C0000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 26, 26, 0.35);
+}
+
+
+
+/* Animations */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .login-card { padding: 30px; }
+}
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 40px !important;
+}
+
+.password-wrapper i {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 20px;
+  color: #555;
+}
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 14px 0;
+  background: #5c0000;
+  color: #ffe8e8;
+  font-size: 14px;
+  font-weight: 600;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.25);
+  z-index: 999;
+}

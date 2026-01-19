@@ -1,0 +1,140 @@
+/* ===========================================
+   PAGE CONTAINER
+=========================================== */
+.citizen-container {
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+}
+
+/* ===========================================
+   TITLE + COUNT
+=========================================== */
+.title {
+  color: #5C0000;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.count-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #5C0000;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ===========================================
+   SEARCH BAR
+=========================================== */
+.search-box {
+  width: 280px;
+  padding: 10px 14px;
+  margin-bottom: 18px;
+  border: 2px solid #5C0000;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  color: #5C0000;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.25s ease;
+}
+
+.search-box:focus {
+  box-shadow: 0 0 8px rgba(92, 0, 0, 0.3);
+  border-color: #A00000;
+}
+
+/* ===========================================
+   TABLE
+=========================================== */
+.citizen-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(92, 0, 0, 0.15);
+}
+
+.citizen-table th {
+  background: #5C0000;
+  color: #fff;
+  padding: 12px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.citizen-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.citizen-table tr:hover td {
+  background-color: #FFF3F3;
+}
+
+/* ===========================================
+   LOADING TEXT
+=========================================== */
+.loading {
+  text-align: center;
+  font-weight: 600;
+  color: #5C0000;
+  margin-top: 20px;
+}
+
+/* ===========================================
+   PAGINATION
+=========================================== */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.pagination button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid #5C0000;
+  background: white;
+  color: #5C0000;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.pagination button:hover:not(.active):not(:disabled) {
+  background: #FDE7E7;
+}
+
+.pagination button.active {
+  background: #5C0000;
+  color: white;
+  border-color: #5C0000;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+@media (max-width: 600px) {
+  .citizen-table th,
+  .citizen-table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .search-box {
+    width: 90%;
+  }
+}

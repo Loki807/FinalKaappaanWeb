@@ -1,0 +1,400 @@
+<div class="home-new">
+
+  <!-- ============= NAVBAR ============= -->
+  <nav class="navbar navbar-expand-lg fixed-top new-nav shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-3" href="#">
+        <i class="bi bi-shield-check text-cyan me-2"></i>Kaappaan
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link new-link">Overview</a></li>
+          <li class="nav-item"><a class="nav-link new-link" >Features</a></li>
+          <li class="nav-item"><a  (click)="gowith()"class="nav-link new-link">Privacy</a></li>
+          <li class="nav-item"><a (click)="go()"class="nav-link new-link" >Contracts</a></li>
+         
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============= HERO SECTION ============= -->
+  <section id="home" class="new-hero">
+    <div class="container d-flex flex-lg-row flex-column align-items-center justify-content-between">
+
+      <!-- Left Content -->
+      <div class="hero-text">
+        <h1 class="hero-title">
+          Next-Gen Safety & Emergency Platform
+        </h1>
+
+        <p class="hero-subtitle">
+          AI-powered insights, real-time alerting, instant communication and
+          a unified dashboard for faster emergency response.
+        </p>
+
+        <button class="btn hero-btn" (click)="goToLogin()">Get Started</button>
+      </div>
+
+      <div class="hero-illustration">
+  <img src="assets/logo 2.png" class="hero-logo-animate" alt="Kaappaan Technology" />
+</div>
+
+    </div>
+  </section>
+
+  <!-- ============= HOW THE APP WORKS SECTION ============= -->
+<section id="how-it-works" class="how-section py-5">
+  <div class="container text-center">
+
+    <h2 class="fw-bold mb-4 text-cyan">How Kaappaan Works</h2>
+    <p class="text-muted mb-5">A simple and powerful system connecting citizens and responders instantly.</p>
+
+    <div class="row g-4">
+
+      <!-- STEP 1 -->
+      <div class="col-md-4">
+        <div class="how-card p-4">
+          <div class="how-icon mb-3">
+            <i class="bi bi-phone-vibrate fs-1 text-cyan"></i>
+          </div>
+          <h5 class="fw-bold mb-2">1. Citizen Sends Alert</h5>
+          <p>With one tap, the citizen triggers an SOS alert including live location.</p>
+        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="col-md-4">
+        <div class="how-card p-4">
+          <div class="how-icon mb-3">
+            <i class="bi bi-broadcast-pin fs-1 text-cyan"></i>
+          </div>
+          <h5 class="fw-bold mb-2">2. Alert Reaches Responders</h5>
+          <p>Nearby responders receive instant notification and alert details.</p>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="col-md-4">
+        <div class="how-card p-4">
+          <div class="how-icon mb-3">
+            <i class="bi bi-map fs-1 text-cyan"></i>
+          </div>
+          <h5 class="fw-bold mb-2">3. Responders Take Action</h5>
+          <p>Responders navigate to the location and resolve the emergency quickly.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+  <!-- ============= FEATURES SECTION ============= -->
+  <section id="features" class="new-features py-5">
+    <div class="container text-center">
+
+      <h2 class="fw-bold mb-4 text-cyan">Platform Capabilities</h2>
+      <p class="text-muted mb-5">Built for cities, responders and safety teams.</p>
+
+      <div class="row g-4">
+
+        <div class="col-md-4">
+          <div class="feature-card">
+            <i class="bi bi-broadcast fs-1 text-cyan"></i>
+            <h5 class="mt-3 fw-bold">Live Alert Tracking</h5>
+            <p>Monitor and respond to emergencies in real-time.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="feature-card">
+            <i class="bi bi-person-lines-fill fs-1 text-cyan"></i>
+            <h5 class="mt-3 fw-bold">Responder Coordination</h5>
+            <p>Instant notifications and action assignment.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="feature-card">
+            <i class="bi bi-bar-chart fs-1 text-cyan"></i>
+            <h5 class="mt-3 fw-bold">Analytics & Insights</h5>
+            <p>Understand patterns, heatmaps and response times.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============= PERFORMANCE STATS STRIP ============= -->
+  <section id="stats" class="stats-strip text-center">
+    <div class="container">
+      <div class="row text-light g-4">
+
+        <div class="col-md-3">
+          <h2 class="fw-bold text-cyan">42+</h2>
+          <p>Active Tenants</p>
+        </div>
+
+        <div class="col-md-3">
+          <h2 class="fw-bold text-cyan">680+</h2>
+          <p>Responders Onboarded</p>
+        </div>
+
+        <div class="col-md-3">
+          <h2 class="fw-bold text-cyan">2k+</h2>
+          <p>Emergency Alerts Managed</p>
+        </div>
+
+        <div class="col-md-3">
+          <h2 class="fw-bold text-cyan">99.9%</h2>
+          <p>System Uptime</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= MOBILE APP PROMO SECTION ============= -->
+<section class="app-promo-section py-5">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+
+      <!-- LEFT : APP IMAGES -->
+      <div class="col-lg-6 text-center">
+        <div class="app-mockup-wrapper">
+          <img
+            src="assets/show.jpg"
+            alt="Kaappaan Mobile App"
+            class="app-mockup-img"
+          />
+        </div>
+      </div>
+
+      <!-- RIGHT : APP DETAILS -->
+      <div class="col-lg-6">
+        <h2 class="fw-bold text-cyan mb-3">
+          Keep monitoring everywhere you go,
+          <br />with our mobile app
+        </h2>
+
+        <p class="text-muted mb-4">
+          Get instant emergency notifications, track alerts in real time,
+          manage responders, and monitor incidents directly from your phone —
+          anytime, anywhere.
+        </p>
+
+        <!-- APP FEATURES -->
+        <ul class="app-feature-list mb-4">
+          <li>📍 Live location-based alerts</li>
+          <li>🚨 Instant SOS notifications</li>
+          <li>📊 Real-time incident status</li>
+          <li>🗺️ Interactive emergency map</li>
+        </ul>
+
+        <!-- STORE BUTTONS -->
+        <div class="d-flex gap-3 flex-wrap">
+          <a href="#" class="store-btn google">
+            <i class="bi bi-google-play me-2"></i> Google Play
+          </a>
+
+          <a href="#" class="store-btn apple">
+            <i class="bi bi-apple me-2"></i> App Store
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+  <section class="py-5 bg-white text-center">
+  <div class="container">
+    <h2 class="fw-bold text-cyan mb-4">Who Uses Kaappaan?</h2>
+    <p class="text-muted mb-5">Designed for everyone involved in public safety</p>
+
+    <div class="row g-4">
+      <div class="col-md-3">
+        <div class="feature-card">
+          <i class="bi bi-person fs-1"></i>
+          <h5 class="fw-bold mt-3">Citizens</h5>
+          <p>Send instant SOS alerts with live location.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="feature-card">
+          <i class="bi bi-shield fs-1"></i>
+          <h5 class="fw-bold mt-3">Police</h5>
+          <p>Respond faster with real-time alerts.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="feature-card">
+          <i class="bi bi-building fs-1"></i>
+          <h5 class="fw-bold mt-3">City Admins</h5>
+          <p>Monitor incidents from one dashboard.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="feature-card">
+          <i class="bi bi-eye fs-1"></i>
+          <h5 class="fw-bold mt-3">Security Teams</h5>
+          <p>Coordinate faster emergency responses.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= MAP PREVIEW SECTION ============= -->
+<section class="map-preview-section py-5 text-center">
+  <div class="container">
+
+    <h2 class="fw-bold text-cyan mb-3">
+      Live Emergency Map View
+    </h2>
+
+    <p class="text-muted mb-4">
+      View real-time alerts, responder locations, and navigation paths
+      on an interactive city map.
+    </p>
+
+    <div class="map-image-wrapper">
+      <img
+        src="assets/map.jpg"
+        alt="Emergency Map Preview"
+        class="map-preview-img"
+      />
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+    <!-- ============================================================
+       ⭐⭐⭐ TERMS & CONDITIONS SECTION (ADDED UNDER PAGE) ⭐⭐⭐
+  ============================================================ -->
+ 
+
+</div>
+<!-- ===========================
+  ✅ A) CONTACT & SUPPORT (LIKE YOUR IMAGE)
+=========================== -->
+
+
+
+<!-- ============================================================
+  ✅ B) TERMS & CONDITIONS (YOUR SECTION)
+============================================================ -->
+<section id="terms" class="terms-section">
+  <div class="container text-center">
+
+    <!-- Title -->
+    <h3 class="terms-title">TERMS &amp; CONDITIONS</h3>
+
+    <!-- Description -->
+    <p class="terms-text">
+      By using the Kaappaan Secure Platform, you agree to our terms regarding safety reporting,
+      emergency communication, responsible alert usage, and data privacy.
+      Misuse of emergency services, providing false information or triggering fake alerts may result in
+      account suspension or legal action. Location access is required to enable accurate emergency response.
+      Continued use of this platform confirms your acceptance of all updated terms and policies.
+    </p>
+
+  </div>
+</section>
+
+
+<!-- ===========================
+  ✅ C) FOOTER (3 SECTIONS / 3 COLUMNS) + SOCIAL INSIDE FOOTER
+=========================== -->
+<footer class="kaappaan-footer">
+  <div class="container">
+
+    <!-- Top part (3 columns) -->
+    <div class="row g-4 footer-top">
+
+      <!-- ===== Column 1: About ===== -->
+      <div class="col-12 col-md-4">
+        <h6 class="footer-head">Kaappaan</h6>
+
+        <p class="footer-text">
+          Secure multi-tenant emergency response platform for Sri Lanka.
+        </p>
+
+        <!-- ✅ Social icons inside footer also -->
+        <div class="footer-social mt-3">
+          <a class="footer-social-icon" href="https://facebook.com" target="_blank" aria-label="Facebook">
+            <i class="bi bi-facebook"></i>
+          </a>
+
+          <a class="footer-social-icon" href="https://instagram.com" target="_blank" aria-label="Instagram">
+            <i class="bi bi-instagram"></i>
+          </a>
+
+          <a class="footer-social-icon" href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+          </a>
+
+          <a class="footer-social-icon" href="mailto:support@kaappaan.com" aria-label="Email">
+            <i class="bi bi-envelope-fill"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- ===== Column 2: Quick links ===== -->
+      <div class="col-12 col-md-4">
+        <h6 class="footer-head">Quick Links</h6>
+
+        <ul class="footer-links">
+          <li><a href="#support">Contact &amp; Support</a></li>
+          <li><a href="#terms">Terms &amp; Conditions</a></li>
+          <li><a routerLink="/login">Login</a></li>
+        </ul>
+      </div>
+
+      <!-- ===== Column 3: Support ===== -->
+      <div class="col-12 col-md-4">
+        <h6 class="footer-head">Support</h6>
+
+        <ul class="footer-links">
+          <li><a href="mailto:support@kaappaan.com">support@kaappaan.com</a></li>
+          <li><a href="tel:+94770000000">+94 77 000 0000</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom line -->
+    <div class="footer-bottom text-center">
+      <small>© {{ currentYear }} Kaappaan Secure Platform — All Rights Reserved.</small>
+    </div>
+
+  </div>
+</footer>

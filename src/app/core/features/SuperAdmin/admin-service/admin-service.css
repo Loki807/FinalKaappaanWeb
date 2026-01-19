@@ -1,0 +1,153 @@
+.service-page{
+  min-height: 100vh;
+  background: #FFF5F5;
+  font-family: "Poppins", sans-serif;
+  color: #5C0000;
+  display: flex;
+  flex-direction: column;
+}
+
+/* TOP BAR */
+.topbar{
+  background: #ffffff;
+  height: 72px;
+  padding: 0 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.brand{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-text{
+  font-weight: 900;
+  font-size: 26px;
+  color: #5C0000;
+}
+
+.shield{ font-size: 20px; }
+
+.back-btn{
+  background: #b30000;
+  color: #fff;
+  border: none;
+  margin-left: 1220px;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* CONTENT */
+.content{
+  flex: 1;
+  padding: 55px 20px 90px; /* bottom space for footer */
+}
+
+.info{
+  text-align: center;
+  font-weight: 700;
+  color: #5C0000;
+}
+.info.error{ color: #b00020; }
+
+/* ✅ EXACT 3 cards */
+.cards{
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.card{
+  border: 1px solid rgba(92,0,0,0.35);
+  border-radius: 16px;
+  overflow: hidden;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.10);
+}
+
+.card-top{
+  background: linear-gradient(180deg, #5C0000, #4b0000);
+  color: white;
+  padding: 22px 20px 26px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.card-title{
+  font-weight: 900;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.card-count{
+  font-size: 44px;
+  font-weight: 900;
+  color: #b30000;
+  text-shadow: 0 2px 0 rgba(0,0,0,0.25);
+}
+
+.card-bottom{
+  background: #fff0f0;
+  color: #5C0000;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 800;
+}
+
+.arrow{
+  font-size: 22px;
+  line-height: 1;
+}
+
+/* FOOTER */
+.footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #ffe8e8;
+  text-align: center;
+  padding: 14px 0;
+  color: #5C0000;
+  font-weight: 600;
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.18);
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .cards{ grid-template-columns: 1fr; }
+}
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 14px 0;
+  background:  #5c0000;      /* Deep Kaappaan Red */
+  color:#ffe8e8 ;
+  font-size: 14px;
+  font-weight: 500;
+  position: fixed;          /* ⭐ Always bottom */
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.25); /* Smooth top shadow */
+  z-index: 999;
+}

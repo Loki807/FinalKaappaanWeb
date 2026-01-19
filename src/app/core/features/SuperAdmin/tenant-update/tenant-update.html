@@ -1,0 +1,124 @@
+<div class="tenant-update-page">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top modern-nav shadow-lg">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4">
+        <i class="bi bi-shield-lock me-2 text-info"></i> Kaappaan <span class="text-light">Admin</span>
+      </a>
+      <div class="ms-auto">
+        <button class="btn-outline-info btn-sm" (click)="Back()">⬅ Back</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN WRAPPER -->
+  <div class="tenant-update-wrapper">
+
+    <div class="glass-card">
+      <h1 class="text-center">✏️ Update Tenant</h1>
+
+      @if (loading) {
+      <p class="text-center text-light">Loading...</p>
+      }
+
+      @if (!loading) {
+
+      <form [formGroup]="form" (ngSubmit)="submit()" class="tenant-update-form">
+
+        <div class="row">
+          <div class="col-md-6">
+            <label>Name</label>
+            <input type="text" formControlName="name" />
+          </div>
+
+          <div class="col-md-6">
+            <label>Email</label>
+            <input type="email" formControlName="email" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <label>Code</label>
+            <input type="text" formControlName="code" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <label>State / District</label>
+            <select formControlName="stateOrDistrict">
+              @for (d of districts; track d) {
+              <option [value]="d">{{ d }}</option>
+              }
+            </select>
+          </div>
+
+          <div class="col-md-6">
+            <label>City</label>
+            <input type="text" formControlName="city" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <label>Address Line 1</label>
+            <input type="text" formControlName="addressLine1" />
+          </div>
+
+          <div class="col-md-6">
+            <label>Address Line 2</label>
+            <input type="text" formControlName="addressLine2" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <label>Postal Code</label>
+            <input type="text" formControlName="postalCode" />
+          </div>
+
+          <div class="col-md-6">
+            <label>Contact Number</label>
+            <input type="text" formControlName="contactNumber" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <label>Service Type</label>
+            <select formControlName="serviceType">
+              <option value="Police">Police</option>
+              <option value="Fire">Fire</option>
+              <option value="Ambulance">Ambulance</option>
+              <option value="University">University</option>
+            </select>
+          </div>
+
+          <div class="col-md-6">
+            <label>Logo URL</label>
+            <input type="text" formControlName="logoUrl" />
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <button type="submit" class="btn-gradient" [disabled]="loading">
+            {{ loading ? 'Updating...' : 'Update Tenant' }}
+          </button>
+        </div>
+
+      </form>
+
+      }
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    © {{ currentYear }} Kaappaan Safety System | All Rights Reserved.
+  </footer>
+
+</div>

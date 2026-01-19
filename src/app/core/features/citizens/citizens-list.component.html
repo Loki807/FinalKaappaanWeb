@@ -1,0 +1,78 @@
+<div class="citizen-container">
+
+  <h2 class="title">Registered Citizens</h2>
+
+  <p class="count-text">
+    Total Citizens: <strong>{{ totalCitizens }}</strong>
+  </p>
+
+  <!-- ⭐ SEARCH BAR -->
+  <input
+    type="text"
+    class="search-box"
+    placeholder="Search..."
+    [(ngModel)]="searchText"
+    (input)="applySearch()"
+  />
+
+  @if (loading) {
+    <p class="loading">Loading citizens...</p>
+  }
+
+  @if (!loading) {
+
+    <table class="citizen-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>NIC</th>
+          <th>Address</th>
+          <th>Emergency Contact</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        @for (c of paginatedCitizens; track c.id) {
+          <tr>
+            <td>{{ c.fullName }}</td>
+            <td>{{ c.email }}</td>
+            <td>{{ c.phoneNumber }}</td>
+            <td>{{ c.nic ?? '-' }}</td>
+            <td>{{ c.address ?? '-' }}</td>
+            <td>{{ c.emergencyContact ?? '-' }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+
+    <!-- ===============================
+         ⭐ PAGINATION SECTION
+    =============================== -->
+    <div class="pagination">
+
+      <button 
+        (click)="prevPage()" 
+        [disabled]="currentPage === 1">
+        Previous
+      </button>
+
+      @for (p of totalPagesArray; track i; let i = $index) {
+        <button
+          (click)="goToPage(i + 1)"
+          [class.active]="currentPage === (i + 1)">
+          {{ i + 1 }}
+        </button>
+      }
+
+      <button 
+        (click)="nextPage()"
+        [disabled]="currentPage === totalPages">
+        Next
+      </button>
+
+    </div>
+  }
+
+</div>

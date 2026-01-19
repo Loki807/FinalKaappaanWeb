@@ -1,0 +1,34 @@
+<div class="login-page">
+  <div class="overlay"></div>
+
+  <div class="login-card">
+    <img
+      src="/assets/logo 2.png"
+      alt="Kaappaan Logo"
+      class="logo mb-3"
+    />
+
+    <h2>🔐 Kaappaan Login</h2>
+
+    <form (ngSubmit)="submit()" [formGroup]="form" class="form-content">
+      <label>Email</label>
+      <input type="email" formControlName="email" placeholder="Enter your email" 
+      />
+      
+      <label>Password</label>
+      <input type="password" formControlName="password" placeholder="Enter your password" />
+      @if (form.controls['password'].invalid && form.controls['password'].touched) {
+        <p class="error">password is required (min 6 chars).</p>
+      }
+      <button type="submit" [disabled]="loading">
+        {{ loading ? 'Logging in...' : 'Login' }}
+      </button>
+
+      <p class="error">{{ message }}</p>
+    </form>
+  </div>
+
+  <footer class="footer">
+    © {{ currentYear }} Kaappaan Safety Portal | All Rights Reserved.
+  </footer>
+</div>

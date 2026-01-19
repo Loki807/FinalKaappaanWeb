@@ -1,0 +1,65 @@
+<div class="department-page">
+
+  <div class="top-row">
+    <h2 class="title">🏢 All Departments</h2>
+
+
+
+  @if (loading) {
+    <p class="loading">Loading departments...</p>
+  }
+
+  @if (!loading && departments.length === 0) {
+    <p class="empty">No departments found.</p>
+  }
+
+  @if (!loading && departments.length > 0) {
+
+    <div class="table-wrapper">
+      <table class="dept-table">
+        <thead>
+          <tr>
+            
+            <th>Tenant ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Contact</th>
+           <th>Department</th>
+            <th class="text-center">Actions</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          @for (d of departments; track d.id) {
+            <tr>
+             
+              <td>{{ d.id }}</td>
+              <td>{{ d.name }}</td>
+              <td>{{ d.email }}</td>
+              <td>{{ d.contactNumber }}</td>
+               <td>{{ d.serviceType }}</td>
+
+              <td class="actions">
+                <button class="btn-view" (click)="viewDept(d.id)">
+                  <i class="bi bi-eye"></i>
+                </button>
+
+                <button class="btn-edit" (click)="editDept(d.id)">
+                  <i class="bi bi-pencil-square"></i>
+                </button>
+
+                <button class="btn-delete" (click)="deleteDept(d.id)">
+                  <i class="bi bi-trash3"></i>
+                </button>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+
+  }
+    <footer class="footer">
+    © {{ currentYear }} Kaappaan Safety Portal | All Rights Reserved.
+  </footer>
+</div>

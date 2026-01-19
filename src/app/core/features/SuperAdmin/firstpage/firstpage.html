@@ -1,0 +1,78 @@
+<div class="firstpage-container">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top modern-nav shadow-lg">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <a class="navbar-brand fw-bold fs-4 m-0">
+        <i class="bi bi-shield-lock me-2 text-info"></i>
+        Kaappaan <span class="text-light"></span>
+      </a>
+
+    </div>
+  </nav>
+
+  <div class="content-wrapper">
+
+
+    <!-- Search -->
+    <div class="top-row">
+
+      <!-- BACK BUTTON -->
+<div class="back-btn-wrapper">
+   
+      
+      <input 
+        type="text"
+        [(ngModel)]="searchText"
+        (input)="filterDistricts()"
+        class="search-box"
+        placeholder="Search district..."
+      />
+
+
+
+  <button class="body-back-btn" (click)="goBack()">
+ 
+    Back
+  </button>
+</div>
+
+      
+
+   
+    </div>
+
+    <!-- No results -->
+    @if (noResults) {
+      <div class="no-results">
+        ❌ No districts found for "<strong>{{ searchText }}</strong>"
+      </div>
+    }
+
+    <!-- RESULTS -->
+    @else {
+      <div class="district-grid">
+        @for (d of filteredDistricts; track d) {
+          <div class="district-card" (click)="viewDistrict(d)">
+            <div class="dist-icon">📍</div>
+            <h3 class="dist-name">{{ d }}</h3>
+            <div class="dist-footer">
+              <span>View Details</span>
+              <i class="bi bi-chevron-right blink"></i>
+               
+
+            </div>
+          </div>
+        }
+      </div>
+    }
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    © {{ currentYear }} Kaappaan | Tenant Management System
+  </footer>
+
+</div>

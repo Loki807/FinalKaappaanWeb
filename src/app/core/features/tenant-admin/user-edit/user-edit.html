@@ -1,0 +1,63 @@
+<div class="edit-page">
+
+  <div class="edit-container" *ngIf="!loading">
+
+    <h2 class="title">Edit User Page</h2>
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+
+      <!-- Name -->
+      <label>Name</label>
+      <input type="text" formControlName="name" />
+      @if (form.controls['name'].invalid && form.controls['name'].touched) {
+      <p class="error">Name is required.</p>
+      }
+
+      <!-- Email -->
+      <label>Email</label>
+      <input type="email" formControlName="email" />
+      @if (form.controls['email'].invalid && form.controls['email'].touched) {
+      <p class="error">Enter a valid email.</p>
+      }
+
+      <!-- Phone -->
+      <label>Phone Number</label>
+      <input type="text" formControlName="phone" />
+      @if (form.controls['phone'].invalid && form.controls['phone'].touched) {
+      <p class="error">Phone number is required.</p>
+      }
+
+      <!-- Role -->
+      <label>Role</label>
+      <select formControlName="role">
+        <option value="">Select Role</option>
+        <option value="TenantAdmin">Tenant Admin</option>
+        <option value="Police">Police</option>
+        <option value="Fire">Fire</option>
+        <option value="Traffic">Traffic</option>
+        <option value="Ambulance">Ambulance</option>
+        <option value="UniversityStaff">University Staff</option>
+      </select>
+
+      <!-- Status -->
+      <label>Status</label>
+      <select formControlName="isActive">
+        <option [value]="true">Active</option>
+        <option [value]="false">Inactive</option>
+      </select>
+
+      <!-- Update button -->
+      <button class="btn-update" type="submit">Update</button>
+
+      <!-- Message -->
+      <p class="msg">{{ message }}</p>
+
+    </form>
+
+    <button class="btn-back" (click)="back()">← Back</button>
+
+  </div>
+  <footer class="footer">
+    © 2025 Kaappaan Safety — All Rights Reserved
+  </footer>
+</div>

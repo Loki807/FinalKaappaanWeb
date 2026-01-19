@@ -1,0 +1,456 @@
+/* ===========================================
+   GLOBAL CLEAN SAAS THEME (White + Red)
+=========================================== */
+body, .home-new {
+  background: linear-gradient(135deg, #FFF5F5, #FFFFFF);;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #5C0000;
+  overflow-x: hidden;
+}
+
+.text-cyan {
+  color: #5C0000 !important; /* Bright Red */
+}
+
+/* Smooth Scroll */
+* {
+  scroll-behavior: smooth;
+}
+
+/* ===========================================
+   NAVBAR (White + Shadow)
+=========================================== */
+.new-nav {
+  background: #ffffff;
+  border-bottom: 1px solid rgba(231, 11, 11, 0.08);
+  padding: 12px 0;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.new-nav.scrolled {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+}
+
+.new-link {
+  color: #5C0000 !important;
+  margin: 0 14px;
+  font-weight: 500;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.new-link:hover {
+  color: #FF1A1A !important;
+}
+
+.new-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #5C0000;
+  transition: 0.3s ease;
+}
+
+.new-link:hover::after {
+  width: 100%;
+}
+
+/* LOGIN BUTTON */
+.new-btn {
+  background: #a00101;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  border: none;
+}
+
+.new-btn:hover {
+  background: #5C0000;
+  transform: translateY(-1px);
+}
+
+/* ===========================================
+   HERO SECTION (Clean SaaS Hero)
+=========================================== */
+.new-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 120px;
+  background: linear-gradient(135deg, #FFF5F5, #FFFFFF);
+}
+
+.hero-text {
+  max-width: 580px;
+  animation: fadeUp 1.2s ease;
+}
+
+.hero-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #5C0000; /* Deep Maroon */
+}
+
+.hero-title span {
+  color: #5C0000; /* Bright Red */
+}
+
+.hero-subtitle {
+  font-size: 1.12rem;
+  color: #773333;
+  margin: 18px 0 28px;
+}
+
+.hero-btn {
+  background: #5C0000;
+  padding: 14px 36px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  color: #fff;
+  transition: 0.3s ease;
+  box-shadow: 0 6px 18px rgba(255, 26, 26, 0.25);
+}
+
+.hero-btn:hover {
+  background: #5C0000;
+  box-shadow: 0 10px 24px rgba(255, 26, 26, 0.35);
+}
+
+/* Illustration */
+.hero-illustration img {
+  width: 430px;
+  animation: fadeIn 1.4s ease;
+}
+
+/* ===========================================
+   FEATURES SECTION (SaaS Cards)
+=========================================== */
+.new-features {
+  background: #ffffff;
+  padding: 70px 0;
+}
+
+.feature-card {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 14px;
+  padding: 26px;
+  transition: 0.3s ease;
+  color: #1A1A1A;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+.feature-card i {
+  color: #5C0000 !important;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+}
+
+/* ===========================================
+   STATS STRIP (Light Red Highlight)
+=========================================== */
+.stats-strip {
+  background: #FFF5F5;
+  padding: 60px 0;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.stats-strip h2 {
+  font-size: 2.4rem;
+  color: #5C0000;
+}
+
+.stats-strip p {
+  color: #773333;
+}
+
+/* ===========================================
+   SUPPORT SECTION
+=========================================== */
+.support-icon {
+  color: #5C0000;
+  transition: 0.3s ease;
+}
+
+.support-icon:hover {
+  color: #5C0000;
+  transform: translateY(-4px);
+}
+
+/* ===========================================
+   FOOTER
+=========================================== */
+.new-footer {
+  background: #FFF5F5;
+  color: #773333;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+/* ===========================================
+   ANIMATIONS
+=========================================== */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+@media (max-width: 768px) {
+  .hero-title { font-size: 2.4rem; }
+  .hero-illustration img { width: 310px; margin-top: 20px; }
+}
+
+/* ===========================================
+   PREMIUM HERO LOGO ANIMATION (NO HOVER)
+=========================================== */
+
+.hero-logo-animate {
+  width: 430px;
+  animation: floatLogo 4s ease-in-out infinite, glowPulse 3s ease-in-out infinite;
+  transition: 0.3s ease;
+}
+
+/* Floating up/down animation */
+@keyframes floatLogo {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+/* Glowing soft red pulse */
+@keyframes glowPulse {
+  0% { filter: drop-shadow(0 0 2px rgba(255, 26, 26, 0.3)); }
+  50% { filter: drop-shadow(0 0 14px rgba(255, 26, 26, 0.6)); }
+  100% { filter: drop-shadow(0 0 2px rgba(255, 26, 26, 0.3)); }
+}
+
+/* ===========================================
+   HOW IT WORKS SECTION
+=========================================== */
+
+.how-section {
+  background: #ffffff;
+}
+
+.how-card {
+  background: #FFF5F5;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+.how-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(255,26,26,0.15);
+}
+
+.how-icon i {
+  animation: pulseIcon 2s infinite ease-in-out;
+}
+
+
+
+@keyframes pulseIcon {
+  0% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.85; }
+}
+
+/* ===========================================
+   MAP PREVIEW SECTION
+=========================================== */
+
+.map-preview-section {
+  background: linear-gradient(135deg, #FFFFFF, #FFF5F5);
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.map-image-wrapper {
+  max-width: 900px;
+  margin: auto;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 14px 32px rgba(0,0,0,0.12);
+  transition: 0.4s ease;
+}
+
+.map-image-wrapper:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(255, 26, 26, 0.25);
+}
+
+.map-preview-img {
+  width: 100%;
+  display: block;
+}
+/* ===========================
+   A) CONTACT & SUPPORT
+=========================== */
+.contact-support{
+  background:#fff;
+  padding: 56px 0 44px 0;
+}
+
+.cs-title{
+  font-weight: 900;
+  color:#5a0000;
+  letter-spacing: .5px;
+  margin-bottom: 10px;
+}
+
+.cs-subtitle{
+  color:#555;
+  margin-bottom: 20px;
+}
+
+/* icons row */
+.cs-icons{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap: 18px;
+}
+
+/* circle icon */
+.cs-icon{
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  border: 2px solid #6b0000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#6b0000;
+  text-decoration:none;
+  background:#fff;
+  transition: .2s ease;
+}
+
+.cs-icon i{ font-size: 22px; }
+
+.cs-icon:hover{
+  transform: translateY(-2px);
+  background:#6b0000;
+  color:#fff;
+}
+
+
+/* ===========================
+   B) TERMS SECTION
+=========================== */
+.terms-section{
+  background:#FFF5F5;
+  border-top:1px solid #eee;
+  padding: 22px 0;
+}
+
+.terms-title{
+  font-weight: 900;
+  color:#C40000;
+  margin-bottom: 12px;
+}
+
+.terms-text{
+  color:#444;
+  max-width: 900px;
+  margin: auto;
+}
+
+
+/* ===========================
+   C) FOOTER (3 COLUMNS)
+=========================== */
+.kaappaan-footer{
+  background: #5C0000;
+  color:#fff;
+  padding: 26px 0 14px 0;
+}
+
+.footer-top{
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255,255,255,.15);
+}
+
+.footer-head{
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.footer-text{
+  color: rgba(255,255,255,.85);
+  margin: 0;
+}
+
+.footer-links{
+  list-style:none;
+  padding: 0;
+  margin: 0;
+  display:flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-links a{
+  color: rgba(255,255,255,.85);
+  text-decoration:none;
+  transition: .2s ease;
+}
+
+.footer-links a:hover{
+  color:#fff;
+  text-decoration: underline;
+}
+
+/* ✅ Social icons in footer */
+.footer-social{
+  display:flex;
+  gap: 12px;
+  align-items:center;
+}
+
+.footer-social-icon{
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255,255,255,.65);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  transition: .2s ease;
+}
+
+.footer-social-icon i{
+  font-size: 16px;
+}
+
+.footer-social-icon:hover{
+  transform: translateY(-2px);
+  border-color:#fff;
+}
+
+.footer-bottom{
+  padding-top: 12px;
+  color: rgba(255,255,255,.8);
+}

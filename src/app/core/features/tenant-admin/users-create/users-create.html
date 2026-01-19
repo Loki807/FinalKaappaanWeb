@@ -1,0 +1,56 @@
+<div class="user-create-page">
+
+  <!-- FORM WRAPPER -->
+  <div class="right-panel">
+
+    <div class="form-card">
+
+      <h2 class="form-title">Create Users Page</h2>
+
+      <form [formGroup]="form" (ngSubmit)="submit()" autocomplete="off">
+
+        <label>Name</label>
+        <input formControlName="name" type="text" />
+        @if (form.controls['name'].invalid && form.controls['name'].touched) {
+          <p class="error">name is required.</p>
+          }
+        <label>Email</label>
+        <input formControlName="email" type="email" />
+         @if (form.controls['email'].invalid && form.controls['email'].touched) {
+              <p class="error">Enter a valid email address.</p>}
+        <label>Phone Number</label>
+        <input formControlName="phone" type="text" />
+            @if (form.controls['phone'].invalid && form.controls['phone'].touched) {
+              <p class="error">phone is requid </p>}
+        <label>Role</label>
+        <select formControlName="role">
+          <option value="">Select Role</option>
+          @for (role of availableRoles; track role) {
+            <option [value]="role">{{ role }}</option>
+          }
+        </select>
+            @if (form.controls['role'].invalid && form.controls['role'].touched) {
+              <p class="error">Role is requid</p>}
+        <label> Password</label>
+        <input formControlName="password" type="password" autocomplete="new-password" />
+         
+          @if (form.controls['password'].invalid && form.controls['password'].touched) {
+          <p class="error">Password is required (min 6 characters).</p>
+         }
+        <button class="btn-create" [disabled]="loading">
+          {{ loading ? 'Creating...' : 'Create' }}
+        </button>
+
+      </form>
+
+      <button class="btn-back" (click)="back()">Back</button>
+
+    </div>
+
+  </div>
+
+</div>
+
+<footer class="footer">
+  © 2025 Kaappaan Safety — All Rights Reserved
+</footer>

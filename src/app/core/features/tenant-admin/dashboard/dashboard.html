@@ -1,0 +1,62 @@
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <div class="left">
+    <i class="bi bi-shield-lock logo-icon"></i>
+    <span class="brand">{{ tenantName }} </span>
+  </div>
+
+  <div class="right">
+
+  </div>
+</nav>
+
+
+
+
+
+<!-- ================= BUTTONS ================= -->
+<div class="top-actions">
+  <button class="create-btn" (click)="createUser()">+ Create User</button>
+
+</div>
+
+<!-- ================= USER TABLE ================= -->
+@if (!loading && users.length > 0) {
+
+  <table class="user-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Role</th>
+        <th>Status</th>
+        <th width="200px">Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      @for (u of users; track u.id) {
+        <tr>
+          <td>{{ u.name }}</td>
+          <td>{{ u.email }}</td>
+          <td>{{ u.phone }}</td>
+          <td>{{ u.role }}</td>
+          <td>{{ u.isActive ? 'Active' : 'Inactive' }}</td>
+          <td class="actions-cell">
+            <button class="btn-view" (click)="viewUser(u.id)">View</button>
+            <button class="btn-edit" (click)="editUser(u.id)">Edit</button>
+            <button class="btn-delete" (click)="deleteUser(u.id)">Delete</button>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+
+}
+
+
+@if (!loading && users.length === 0) {
+  <p class="empty">No users found.</p>
+}
+

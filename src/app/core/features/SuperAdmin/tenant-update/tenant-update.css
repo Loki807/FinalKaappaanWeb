@@ -1,0 +1,172 @@
+@import "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css";
+
+/* ================================
+   PAGE BACKGROUND — LOGIN THEME
+================================ */
+.tenant-update-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FFF5F5, #FFFFFF);
+  font-family: "Poppins", sans-serif;
+  padding-top: 100px; /* space for navbar */
+  padding-bottom: 80px; /* space for footer */
+  color: #5C0000;
+}
+
+/* ================================
+   CENTER WRAPPER
+================================ */
+.tenant-update-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+/* ================================
+   MAIN CARD — DARK MAROON (LOGIN STYLE)
+================================ */
+.glass-card {
+  background: #5C0000;
+  padding: 40px;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 850px;
+  color: #f5cccc;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.20);
+  animation: fadeUp 0.9s ease;
+}
+
+/* TITLE */
+.glass-card h1 {
+  color: #f5cccc;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+/* ================================
+   LABELS — LIGHT RED TEXT
+================================ */
+label {
+  font-size: 0.92rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #f5cccc;
+  display: block;
+}
+
+/* ================================
+   INPUTS — WHITE WITH MAROON BORDER
+================================ */
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(92,0,0,0.25);
+  background: white;
+  color: #5C0000;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  transition: 0.3s ease;
+}
+
+input:focus {
+  border-color: #A00101;
+  box-shadow: 0 0 8px rgba(160,1,1,0.3);
+  outline: none;
+}
+
+/* ================================
+   GRID STRUCTURE
+================================ */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 5px;
+}
+
+.col-md-6 {
+  flex: 1 1 calc(50% - 10px);
+}
+
+.col-md-12 {
+  flex: 1 1 100%;
+}
+
+/* ================================
+   BUTTONS — MATCH LOGIN THEME
+================================ */
+.btn-gradient {
+  background: #A00101;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  transition: 0.3s ease;
+  box-shadow: 0 6px 18px rgba(255, 26, 26, 0.25);
+}
+
+.btn-gradient:hover {
+  background: #5C0000;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(255,26,26,0.40);
+}
+
+/* back button */
+.btn-outline-info,
+.btn-back {
+  background: #772222;
+  border: none !important;
+  padding: 10px 16px;
+  border-radius: 10px;
+  color: white !important;
+  font-weight: 600;
+}
+
+.btn-nav-back:hover {
+  background: #7A0101; /* darker maroon */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(92,0,0,0.5);
+}
+
+/* ================================
+   FOOTER (MATCH SYSTEM)
+================================ */
+.footer {
+  background: #5C0000;
+  color: #f5cccc;
+  text-align: center;
+  padding: 12px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.85rem;
+}
+
+/* ================================
+   ANIMATION
+================================ */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.navbar-brand {
+  color: #5C0000 !important;
+}
+/* ⭐ FIXED Kaappaan Footer */
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 14px 0;
+  background:  #5c0000;      /* Deep Kaappaan Red */
+  color:#ffe8e8 ;
+  font-size: 14px;
+  font-weight: 500;
+  position: fixed;          /* ⭐ Always bottom */
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.25); /* Smooth top shadow */
+  z-index: 999;
+}

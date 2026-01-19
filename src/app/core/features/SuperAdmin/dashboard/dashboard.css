@@ -1,0 +1,265 @@
+/* ============================================
+   CLEAN SAAS THEME (White + Maroon)
+============================================ */
+.tenant-dashboard {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #ffffff, #FFF5F5);
+  color: #5C0000;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ============================================
+   NAVBAR (White + Shadow)
+============================================ */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  color: #5C0000;
+  padding: 16px 40px;
+  border-bottom: 1px solid rgba(92, 0, 0, 0.15);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.navbar .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #5C0000;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+/* Logout Button */
+.btn-nav {
+  background: #A00101;
+  color: #fff;
+  border: none;
+
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+
+
+/* ============================================
+   CREATE BUTTON
+============================================ */
+.dashboard-actions {
+  margin-top: 110px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+/* ============================================
+   DASHBOARD CARDS (Clean SaaS)
+============================================ */
+.dashboard-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.section {
+  width: 260px;
+  border-radius: 16px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  background: #5C0000;
+  border: 1px solid rgba(92, 0, 0, 0.12);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  pointer-events: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 26px rgba(92, 0, 0, 0.20);
+}
+
+.section-head {
+  padding: 25px;
+  text-align: center;
+  flex-grow: 1;
+  /* Header expands so footer stays aligned */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* Text */
+.section-head h2 {
+  font-size: 1.2rem;
+  color: #ffeaea;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.count {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #A00101;
+  pointer-events: none;
+}
+
+/* Footer */
+.section-footer {
+  background: #FFF5F5;
+  padding: 12px 16px;
+  border-top: 1px solid rgba(92, 0, 0, 0.15);
+  border-radius: 0 0 16px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #5C0000;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+/* ICON pulse */
+.section-footer i {
+  transition: 0.3s ease;
+  pointer-events: none;
+}
+
+.section-footer span {
+  pointer-events: none;
+}
+
+.section:hover i {
+  transform: translateX(4px);
+}
+
+/* ============================================
+   FOOTER
+============================================ */
+.footer {
+  text-align: center;
+  padding: 18px;
+  margin-top: auto;
+  background: #FFF5F5;
+  color: #5C0000;
+  border-top: 1px solid rgba(92, 0, 0, 0.15);
+  font-size: 0.9rem;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease;
+}
+
+/* Back button */
+.btn-back {
+  background-color: #8b0000;
+  color: #fff;
+  padding: 10px 18px;
+  margin-left: 1050px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+  white-space: nowrap;
+  gap: 5px;
+}
+
+.btn-back:hover {
+  background-color: #a30000;
+}
+
+/* ============================================
+   UNIVERSITY THEME (Indigo / Violet)
+============================================ */
+.section.university {
+  background: linear-gradient(135deg, #1e1b4b, #312e81);
+  border: 1px solid rgba(79, 70, 229, 0.2);
+}
+
+.section.university:hover {
+  box-shadow: 0 10px 26px rgba(79, 70, 229, 0.3);
+}
+
+.section.university .count {
+  color: #818cf8;
+}
+
+.section.university .section-footer {
+  background: #f5f3ff;
+  color: #312e81;
+  border-top: 1px solid rgba(79, 70, 229, 0.1);
+}
+
+/* ============================================
+   ACTION BAR
+============================================ */
+.action-bar {
+  display: flex;
+  justify-content: center;
+  padding: 30px 20px;
+  margin-top: 80px;
+}
+
+.btn-create-tenant {
+  background: linear-gradient(135deg, #5C0000, #A00101);
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(92, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  pointer-events: auto;
+  position: relative;
+  z-index: 10;
+}
+
+.btn-create-tenant:hover {
+  background: linear-gradient(135deg, #A00101, #D50000);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(92, 0, 0, 0.4);
+}
+
+.btn-create-tenant i {
+  font-size: 1.3rem;
+}

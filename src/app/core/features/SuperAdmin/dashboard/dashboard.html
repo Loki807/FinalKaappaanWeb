@@ -1,0 +1,78 @@
+<div class="tenant-dashboard">
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="brand">
+      <i class="bi bi-shield-lock"></i>
+      <span>Kaappaan <strong>Admin</strong></span>
+    </div>
+
+    <div class="nav-buttons">
+      <button class="btn-nav" (click)="logout()">Back</button>
+    </div>
+  </nav>
+
+  <!-- ACTION BUTTONS -->
+  <div class="action-bar" style="margin-top: 100px; display: flex; justify-content: flex-end; padding: 0 40px;">
+    <button class="btn-create-tenant" (click)="createTenant()"
+      style="background: #5C0000; color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+      <i class="bi bi-plus-circle"></i> Create New Tenant
+    </button>
+  </div>
+
+  <!-- SERVICE TYPE CARDS -->
+  <section class="dashboard-container" style="padding-top: 20px;">
+
+
+    <div class="section police" (click)="viewTenants('Police')">
+      <div class="section-head">
+        <h2>👮 Police Tenants</h2>
+        <span class="count">{{ policeCount }}</span>
+      </div>
+      <div class="section-footer">
+        <span>View Details</span>
+        <i class="bi bi-chevron-right"></i>
+      </div>
+    </div>
+
+    <div class="section fire" (click)="viewTenants('Fire')">
+      <div class="section-head">
+        <h2>🔥 Fire Tenants</h2>
+        <span class="count">{{ fireCount }}</span>
+      </div>
+      <div class="section-footer">
+        <span>View Details</span>
+        <i class="bi bi-chevron-right"></i>
+      </div>
+    </div>
+
+    <div class="section ambulance" (click)="viewTenants('Ambulance')">
+      <div class="section-head">
+        <h2>🚑 Ambulance Tenants</h2>
+        <span class="count">{{ ambulanceCount }}</span>
+      </div>
+      <div class="section-footer">
+        <span>View Details</span>
+        <i class="bi bi-chevron-right"></i>
+      </div>
+    </div>
+
+    <!-- 🆕 UNIVERSITY CARD -->
+    <div class="section university" (click)="viewTenants('University')">
+      <div class="section-head">
+        <h2>🎓 University Tenants</h2>
+        <span class="count">{{ universityCount }}</span>
+      </div>
+      <div class="section-footer">
+        <span>View Details</span>
+        <i class="bi bi-chevron-right"></i>
+      </div>
+    </div>
+
+  </section>
+
+  <footer class="footer">
+    © {{ currentYear }} Kaappaan | Tenant Management System
+  </footer>
+
+</div>

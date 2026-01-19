@@ -1,0 +1,102 @@
+<div class="dashboard-page">
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top modern-nav shadow-lg">
+  <div class="container d-flex align-items-center justify-content-between">
+
+    <!-- Brand -->
+    <div class="d-flex align-items-center gap-3">
+      <a class="navbar-brand fw-bold fs-4 m-0" href="#">
+        <i class="bi bi-shield-lock me-2 text-info"></i>
+        Kaappaan <span class="text-light"></span>
+      </a>
+    </div>
+
+    <!-- ✅ Right side: Profile icon + dropdown -->
+    <div class="profile-area">
+
+      <!-- Profile Icon Button -->
+      <button class="profile-btn" type="button" (click)="toggleProfileMenu()">
+        <i class="bi bi-person-circle"></i>
+      </button>
+
+      <!-- Dropdown -->
+      @if (profileOpen) {
+        <div class="profile-menu">
+          <button type="button" class="menu-item" (click)="goProfile()">
+            <i class="bi bi-person"></i>
+            <span>Profile</span>
+          </button>
+
+         <!-- ✅ ADD THIS SETTINGS BUTTON -->
+  <button type="button" class="menu-item" (click)="goSettings()">
+    <i class="bi bi-gear"></i>
+    <span>Settings</span>
+  </button>
+
+
+            <button type="button" class="menu-item danger" (click)="logout()">
+            <i class="bi bi-box-arrow-right"></i>
+            <span>Logout</span>
+          </button>
+        </div>
+      }
+
+    </div>
+
+  </div>
+</nav>
+
+
+  <!-- ===== MAIN SCROLLABLE BODY ===== -->
+  <main class="dashboard-content text-light text-center">
+    <div class="container pt-5">
+      <h1 class="fw-bold mb-3 animate__animated animate__fadeInDown">
+        🧭 TenantAdmin Dashboard Pages
+      </h1>
+      <p class="lead mb-5 animate__animated animate__fadeInUp">
+        Manage your platform — Tenants, Users, and System Stats.
+      </p>
+
+      <!-- 📊 Stat Cards -->
+      <div class="row g-4 justify-content-center mb-5">
+        <div class="col-md-4">
+          <div   class="dashboard-card h-100" 
+                    style="cursor:pointer" 
+                      (click)=" goTo()">
+            <i class="bi bi-people-fill stats-icon"></i>
+    <h4 class="stats-title">Total Users</h4>
+    <p class="stats-number">{{ totalUsers }}</p>
+            <p class="text-gray">Active Tenant Organizations</p>
+             
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="dashboard-card h-100">
+            <i class="bi bi-people-fill text-success fs-1 mb-3"></i>
+            <h5 class="fw-bold">Citizens</h5>
+            <p class="display-6 fw-bold text-success">16</p>
+            <p class="text-gray">Registered Admins & Responders</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="dashboard-card h-100">
+            <i class="bi bi-exclamation-triangle-fill text-warning fs-1 mb-3"></i>
+            <h5 class="fw-bold"> Alerts</h5>
+            <p class="display-6 fw-bold text-warning">Coming Soon</p>
+            <p class="text-gray">Ongoing Emergency Alerts</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </main>
+  <!-- ===== FIXED FOOTER ===== -->
+  <footer class="footer text-center text-black-100">
+    <div class="container">
+      <small>© {{ currentYear }} Kaappaan Safety System | All Rights Reserved.</small>
+    </div>
+  </footer>
+</div>

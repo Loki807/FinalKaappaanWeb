@@ -1,0 +1,128 @@
+<div class="dashboard-page">
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top modern-nav shadow-lg">
+  <div class="container d-flex align-items-center justify-content-between">
+
+    <!-- Brand -->
+    <div class="d-flex align-items-center gap-3">
+      <a class="navbar-brand fw-bold fs-4 m-0" href="#">
+        <i class="bi bi-shield-lock me-2 text-info"></i>
+        Kaappaan <span class="text-light"></span>
+      </a>
+    </div>
+
+    <!-- ✅ Right side: Profile icon + dropdown -->
+    <div class="profile-area">
+
+      <!-- Profile Icon Button -->
+      <button class="profile-btn" type="button" (click)="toggleProfileMenu()">
+        <i class="bi bi-person-circle"></i>
+      </button>
+
+      <!-- Dropdown -->
+      @if (profileOpen) {
+        <div class="profile-menu">
+          <button type="button" class="menu-item" (click)="goProfile()">
+            <i class="bi bi-person"></i>
+            <span>Profile</span>
+          </button>
+
+          <button type="button" class="menu-item danger" (click)="logout()">
+            <i class="bi bi-box-arrow-right"></i>
+            <span>Logout</span>
+          </button>
+        </div>
+      }
+
+    </div>
+
+  </div>
+</nav>
+
+
+  <!-- ===== MAIN BODY ===== -->
+  <main class="dashboard-content text-center">
+    <div class="container">
+
+      <h1 class="page-title animate__animated animate__fadeInDown">
+        🧭 Super Admin Dashboard
+      </h1>
+
+      <p class="page-sub animate__animated animate__fadeInUp">
+        Manage your platform — Tenants, Users, and System Stats.
+      </p>
+
+      <!-- ✅ QUICK STATS -->
+      <div class="row g-4 justify-content-center mb-5">
+
+        <div class="col-12 col-md-4">
+          <div class="dashboard-card h-100 clickable" (click)="goTo()">
+            <i class="bi bi-building fs-1 mb-3"></i>
+            <h5 class="fw-bold">Total Tenants</h5>
+            <p class="display-number">{{ totalTenants }}</p>
+            <p class="text-gray">Active Tenant Organizations</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="dashboard-card h-100 clickable" (click)="goAdmin()">
+            <i class="bi bi-people-fill fs-1 mb-3"></i>
+            <h5 class="fw-bold">Total Admins</h5>
+            <p class="display-number">{{ totalDepartments }}</p>
+            <p class="text-gray">Registered Admins & Responders</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="dashboard-card h-100">
+            <i class="bi bi-exclamation-triangle-fill fs-1 mb-3"></i>
+            <h5 class="fw-bold">Active Alerts</h5>
+            <p class="display-number coming">Coming Soon</p>
+            <p class="text-gray">Ongoing Emergency Alerts</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ✅ MANAGEMENT PANELS -->
+      <div class="row g-4 justify-content-center mb-5">
+
+        <div class="col-12 col-lg-5">
+          <div class="option-card h-100">
+            <i class="bi bi-building-gear fs-1 mb-3"></i>
+            <h4 class="fw-bold">Tenant Management</h4>
+            <p class="text-gray mb-4">
+              View, edit, or remove tenants from the Kaappaan platform.
+            </p>
+            <button class="btn btn-modern px-4 py-2" (click)="openTenants()">
+              Manage Tenants
+            </button>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-5">
+          <div class="option-card h-100">
+            <i class="bi bi-person-gear fs-1 mb-3"></i>
+            <h4 class="fw-bold">User Management</h4>
+            <p class="text-gray mb-4">
+              View or assign roles to users across all tenants.
+            </p>
+            <button class="btn btn-modern px-4 py-2" (click)="openUsers()">
+              Manage Users
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+</div>
+
+<!-- ===== FIXED FOOTER ===== -->
+<footer class="footer text-center">
+  <div class="container">
+    <small>© {{ currentYear }} Kaappaan Safety System | All Rights Reserved.</small>
+  </div>
+</footer>

@@ -1,0 +1,33 @@
+<div class="view-container">
+
+  <h1>User Details</h1>
+
+  @if (loading) {
+    <p>Loading...</p>
+  }
+
+  @if (!loading && user) {
+
+    <div class="card">
+
+      <p><strong>Name:</strong> {{ user.name }}</p>
+      <p><strong>Email:</strong> {{ user.email }}</p>
+      <p><strong>Phone:</strong> {{ user.phone }}</p>
+      <p><strong>Role:</strong> {{ user.role }}</p>
+      <p><strong>Status:</strong>
+        <span [ngClass]="user.isActive ? 'active' : 'inactive'">
+          {{ user.isActive ? 'Active' : 'Inactive' }}
+        </span>
+      </p>
+
+      <div class="actions">
+        <button (click)="editUser(user.id)">Edit</button>
+        <button class="delete" (click)="deleteUser(user.id)">Delete</button>
+        <button (click)="back() ">Back</button>
+      </div>
+
+    </div>
+
+  }
+
+</div>

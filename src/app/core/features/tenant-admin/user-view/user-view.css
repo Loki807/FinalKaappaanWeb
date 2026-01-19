@@ -1,0 +1,117 @@
+/* ================================
+   PAGE WRAPPER
+================================ */
+.view-container {
+  max-width: 600px;
+  margin: 120px auto;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  color: #5C0000;
+  text-align: left;
+}
+
+/* ================================
+   HEADING
+================================ */
+.view-container h1 {
+  text-align: center;
+  color: #5C0000;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+/* ================================
+   CARD STYLING
+================================ */
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 25px 28px;
+  box-shadow: 0 8px 25px rgba(92,0,0,0.15);
+  border: 1px solid rgba(92,0,0,0.2);
+  color: #5C0000;
+  animation: fadeIn 0.3s ease;
+}
+
+/* FANCY FADE-IN */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.card p {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #5C0000;
+}
+
+/* LABELS */
+.card strong {
+  color: #5C0000;
+}
+
+/* ================================
+   STATUS BADGES
+================================ */
+.active {
+  padding: 4px 12px;
+  background: #d4ffe1;
+  color: #0a7a33;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.inactive {
+  padding: 4px 12px;
+  background: #ffe4e4;
+  color: #b30000;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* ================================
+   BUTTON GROUP
+================================ */
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.actions button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: 0.2s ease;
+}
+
+/* EDIT BUTTON */
+.actions button:first-child {
+  background: #5C0000;
+  color: #f5cccc;
+}
+.actions button:first-child:hover {
+  background: #7a0000;
+}
+
+/* DELETE BUTTON */
+.actions .delete {
+  background: #b30000;
+  color: white;
+}
+.actions .delete:hover {
+  background: #e60000;
+}
+
+/* BACK BUTTON */
+.actions button:last-child {
+  background: #f5cccc;
+  color: #5C0000;
+}
+.actions button:last-child:hover {
+  background: #e2b6b6;
+}

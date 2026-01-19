@@ -1,0 +1,57 @@
+<div class="service-page">
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="brand">
+      <span class="shield">🛡️</span>
+      <span class="brand-text">Kaappaan </span>
+    </div>
+
+    
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+       <button class="back-btn" type="button" (click)="back()">Back</button>
+    @if (loading) {
+      <p class="info">Loading counts...</p>
+    }
+
+    @if (!loading && error) {
+      <p class="info error">{{ error }}</p>
+    }
+
+    @if (!loading && !error) {
+      <div class="cards">
+        @for (c of cards; track c.key) {
+
+          <button class="card" type="button" (click)="go(c.key)">
+
+            <div class="card-top">
+              <div class="card-title">
+                <span class="icon">{{ c.icon }}</span>
+                <span>{{ c.title }}</span>
+              </div>
+
+              <div class="card-count">{{ c.count }}</div>
+            </div>
+
+            <div class="card-bottom">
+              <span>View Details</span>
+              <span class="arrow">›</span>
+            </div>
+
+          </button>
+
+        }
+      </div>
+    }
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    © {{ currentYear }} Kaappaan | Tenant Management System
+  </footer>
+
+</div>

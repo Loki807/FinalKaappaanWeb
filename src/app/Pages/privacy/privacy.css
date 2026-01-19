@@ -1,0 +1,111 @@
+/* -----------------------------------
+   ROOT THEME COLORS
+----------------------------------- */
+:root{
+  --maroon: #5C0000;
+  --white: #ffffff;
+  --light-bg: #fff8f8;
+  --text: #333;
+  --radius: 12px;
+}
+
+/* -----------------------------------
+   GLOBAL
+----------------------------------- */
+body{
+  margin: 0;
+  padding-bottom: 80px;
+  background: var(--light-bg);
+  font-family: "Segoe UI", sans-serif;
+  color: var(--text);
+}
+
+/* -----------------------------------
+   CONTAINER
+----------------------------------- */
+.policy-container{
+  max-width: 850px;
+  margin: 30px auto;
+  background: var(--white);
+  padding: 30px;
+  border-radius: var(--radius);
+  border: 2px solid var(--maroon);
+  box-shadow: 0 4px 16px rgba(92,0,0,0.08);
+}
+
+/* -----------------------------------
+   HEADER
+----------------------------------- */
+.policy-header{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.policy-header .logo-icon{
+  font-size: 65px;
+  color: var(--maroon);
+}
+
+.policy-header h1{
+  margin: 10px 0 5px;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--maroon);
+}
+
+.policy-header .sub{
+  color: #555;
+  font-size: 15px;
+}
+
+/* -----------------------------------
+   SECTIONS
+----------------------------------- */
+.policy-section{
+  margin-bottom: 28px;
+}
+
+.policy-section h2{
+  font-size: 20px;
+  color: var(--maroon);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.policy-section h2 i{
+  margin-right: 6px;
+  font-size: 20px;
+}
+
+.policy-section p,
+.policy-section ul{
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.policy-section ul{
+  padding-left: 20px;
+}
+
+.policy-section ul li{
+  margin-bottom: 6px;
+}
+
+/* -----------------------------------
+   FOOTER  (FINAL FIXED VERSION)
+----------------------------------- */
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 14px 0;
+  background: #ffffff;      /* WHITE background */
+  color: #5C0000;           /* MAROON text */
+  font-size: 14px;
+  font-weight: 600;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.25);
+  z-index: 999;
+}

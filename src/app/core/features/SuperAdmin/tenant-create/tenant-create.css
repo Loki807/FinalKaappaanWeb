@@ -1,0 +1,197 @@
+/* MAIN PAGE */
+.tenant-page {
+  display: flex;
+  height: 100vh;
+  background: #FFF5F5;
+  font-family: "Poppins", sans-serif;
+  color: #5C0000;
+}
+
+/* LEFT SIDE */
+.tenant-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-logo-card {
+  text-align: center;
+}
+
+.left-logo-img {
+  width: 130px;
+  height: 130px;
+  background: white;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.15);
+}
+
+.left-title {
+  font-size: 30px;
+  font-weight: 800;
+  margin-top: 10px;
+}
+
+.left-subtitle {
+  color: #7a3b3b;
+  margin-top: 5px;
+}
+
+/* RIGHT SIDE */
+.tenant-right {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+}
+
+/* FORM BOX */
+.form-container {
+  width: 100%;
+  max-width: 1000px;
+  background: #5C0000;
+  padding: 30px;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+}
+
+.form-title {
+  color: white;
+  font-weight: 900;
+  text-align: center;
+}
+
+/* INPUTS */
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  background: #ffffff;
+  color: #5C0000;
+}
+
+input:focus,
+select:focus {
+  border-color: #ffdddd;
+  box-shadow: 0 0 4px rgba(255,255,255,0.5);
+}
+
+/* INVALID INPUTS */
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+  border-color: #ff3333 !important;
+  background: #ffe8e8 !important;
+}
+
+.error {
+  font-size: 13px;
+  margin-top: 4px;
+  color: #ff9999;
+}
+
+/* BUTTONS */
+.actions {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.back-btn {
+  background: #777;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+}
+
+.submit-btn {
+  background: white;
+  color: #5C0000;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  border: none;
+}
+
+.submit-btn:disabled {
+  opacity: 0.5;
+}
+
+/* ==== BUTTON ROW ==== */
+.buttons-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Back = left, Create = right */
+  align-items: center;
+  margin-top: 30px;
+}
+
+.create-btn {
+  background: white;
+  color: #5C0000;
+  padding: 12px 30px;
+  border: none;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.create-btn:hover {
+  background: #f1f1f1;
+}
+
+
+/* ⭐ FIXED Kaappaan Footer */
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 14px 0;
+  background:  #ffe8e8 ;      /* Deep Kaappaan Red */
+  color:#5C0000;
+  font-size: 14px;
+  font-weight: 500;
+  position: fixed;          /* ⭐ Always bottom */
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.25); /* Smooth top shadow */
+  z-index: 999;
+}
+/* TOP RIGHT BACK BUTTON */
+.form-top-right {
+  display: flex;
+  justify-content: flex-end; 
+  margin-bottom: 15px;
+}
+
+.back-btn {
+  background: white;
+  color: #5C0000;
+  padding: 10px 20px;
+  border: none;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.back-btn:hover {
+  background: #f2f2f2;
+}
+
+
+/* BOTTOM RIGHT CREATE BUTTON */
+.form-bottom-right {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+

@@ -1,0 +1,94 @@
+.department-page {
+  padding: 40px;
+  font-family: "Poppins", sans-serif;
+  color: #5C0000;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.dept-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.dept-table th {
+  background: #5C0000;
+  color: white;
+  padding: 12px;
+}
+
+.dept-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.dept-table tr:hover td {
+  background: #fff1f1;
+}
+
+.actions {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.btn-view, .btn-edit, .btn-delete {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-view {
+  background: #009f65;
+}
+
+.btn-edit {
+  background: #A00101;
+}
+
+.btn-delete {
+  background: #C30000;
+}
+
+.btn-view:hover,
+.btn-edit:hover,
+.btn-delete:hover {
+  transform: scale(1.1);
+}
+
+.loading, .empty {
+  font-size: 1.1rem;
+  color: #7A0000;
+  font-weight: 600;
+}
+
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 14px 0;
+  background:#ffe8e8;      /* Deep Kaappaan Red */
+  color: #5c0000 ;
+  font-size: 14px;
+  font-weight: 500;
+  position: fixed;          /* ⭐ Always bottom */
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.25); /* Smooth top shadow */
+  z-index: 999;
+}

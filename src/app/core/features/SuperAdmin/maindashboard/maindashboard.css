@@ -1,0 +1,280 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css";
+
+/* ============================================
+   BASE THEME
+============================================ */
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffffff, #FFF5F5);
+  color: #5C0000;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+/* ============================================
+   NAVBAR
+============================================ */
+.modern-nav {
+  background: #ffffff;
+  border-bottom: 1px solid rgba(92,0,0,0.12);
+  height: 75px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  z-index: 1000;
+}
+
+.navbar-brand {
+  color: #5C0000 !important;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+}
+
+.navbar-brand i {
+  color: #A00101 !important;
+}
+
+.brand-sub{
+  color: #A00101;
+  font-weight: 900;
+}
+
+/* Logout Button */
+.btn-outline-info {
+  border-radius: 10px;
+  border-color: #A00101 !important;
+  color: #A00101 !important;
+  font-weight: 700;
+  padding: 6px 16px;
+  transition: 0.25s;
+}
+.btn-outline-info:hover {
+  background: #A00101 !important;
+  color: #ffffff !important;
+}
+
+/* extra small quick buttons */
+.btn-modern-ghost{
+  border: 1px solid rgba(160,1,1,0.35);
+  color: #A00101;
+  background: transparent;
+  border-radius: 10px;
+  font-weight: 800;
+}
+.btn-modern-ghost:hover{
+  background: #fff0f0;
+}
+
+/* ============================================
+   MAIN CONTENT SCROLL
+============================================ */
+.dashboard-content {
+  flex: 1;
+  overflow-y: auto;
+  padding-top: 110px;   /* space for fixed navbar */
+  padding-bottom: 110px; /* space for fixed footer */
+}
+
+.page-title{
+  font-size: clamp(22px, 2.4vw, 36px);
+  font-weight: 900;
+  margin-bottom: 10px;
+  color: #5C0000;
+}
+
+.page-sub{
+  font-size: clamp(14px, 1.2vw, 18px);
+  color: #7A2A2A;
+  margin-bottom: 36px;
+}
+
+/* ============================================
+   STAT CARDS
+============================================ */
+.dashboard-card {
+  background: #5C0000;
+  border: 1px solid rgba(92,0,0,0.12);
+  border-radius: 16px;
+  padding: 26px 20px;
+  text-align: center;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.08);
+  transition: 0.25s ease;
+  color: #eee0e0;
+}
+
+.dashboard-card i{
+  color: #eee0e0;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 34px rgba(92,0,0,0.20);
+}
+
+.clickable{
+  cursor: pointer;
+}
+
+.display-number{
+  font-size: clamp(30px, 3vw, 50px);
+  font-weight: 900;
+  margin: 8px 0 6px;
+  color: #ffffff;
+}
+
+.display-number.coming{
+  font-size: clamp(22px, 2.3vw, 44px);
+  color: #ffffff;
+}
+
+.text-gray {
+  color: #f6e3e3;
+  margin: 0;
+}
+
+/* ============================================
+   OPTION CARDS
+============================================ */
+.option-card {
+  background: #5C0000;
+  border: 1px solid rgba(92,0,0,0.12);
+  border-radius: 22px;
+  padding: 42px 26px;
+  text-align: center;
+  transition: 0.25s ease;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+  color: #eee0e0;
+}
+
+.option-card i{
+  color: #eee0e0;
+}
+
+.option-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 38px rgba(92,0,0,0.18);
+}
+
+/* Button */
+.btn-modern {
+  background: #A00101;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-weight: 800;
+  padding: 10px 24px;
+  transition: 0.25s ease;
+  box-shadow: 0 10px 24px rgba(160,1,1,0.25);
+}
+.btn-modern:hover {
+  background: #420000;
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   FOOTER
+============================================ */
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 14px 0;
+  background: #5c0000;
+  color: #ffe8e8;
+  font-size: 14px;
+  font-weight: 600;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.25);
+  z-index: 999;
+}
+
+/* ============================================
+   ✅ SIZE DETECT USING MEDIA QUERIES
+   Mobile tweaks
+============================================ */
+@media (max-width: 768px){
+  .modern-nav{ height: 68px; }
+  .dashboard-content{ padding-top: 95px; padding-bottom: 95px; }
+  .dashboard-card{ padding: 22px 16px; border-radius: 14px; }
+  .option-card{ padding: 34px 18px; border-radius: 18px; }
+}
+/* ✅ Profile area (right side) */
+.profile-area{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* ✅ Profile icon button */
+.profile-btn{
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid rgba(160,1,1,0.25);
+  background: #fff;
+  color: #A00101;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  transition: 0.2s ease;
+}
+
+.profile-btn i{
+  font-size: 22px;
+}
+
+.profile-btn:hover{
+  transform: translateY(-1px);
+  border-color: rgba(160,1,1,0.45);
+}
+
+/* ✅ Dropdown menu */
+.profile-menu{
+  position: absolute;
+  top: 52px;
+  right: 0;
+  width: 170px;
+  background: #ffffff;
+  border: 1px solid rgba(92,0,0,0.12);
+  border-radius: 12px;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+  overflow: hidden;
+  z-index: 2000;
+}
+
+/* menu items */
+.menu-item{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-weight: 700;
+  color: #5C0000;
+  cursor: pointer;
+}
+
+.menu-item i{
+  font-size: 16px;
+  color: #A00101;
+}
+
+.menu-item:hover{
+  background: #FFF5F5;
+}
+
+/* logout red */
+.menu-item.danger{
+  color: #b00020;
+}
+.menu-item.danger i{
+  color: #b00020;
+}
+

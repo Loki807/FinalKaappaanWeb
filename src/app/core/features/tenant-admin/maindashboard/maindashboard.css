@@ -1,0 +1,242 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css";
+
+/* ============================================
+   CLEAN WHITE + MAROON SAAS THEME
+============================================ */
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffffff, #FFF5F5);
+  color: #5C0000;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+/* ============================================
+   NAVBAR
+============================================ */
+.modern-nav {
+  background: #ffffff;
+  border-bottom: 1px solid rgba(92,0,0,0.12);
+  height: 75px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  z-index: 1000;
+  transition: 0.3s ease;
+}
+
+.navbar-brand {
+  color: #5C0000 !important;
+  font-weight: 800;
+}
+
+.navbar-brand i {
+  color: #A00101 !important;
+}
+
+/* Logout Button */
+.btn-outline-info {
+  border-radius: 8px;
+  border-color: #A00101 !important;
+  color: #A00101 !important;
+  font-weight: 600;
+  padding: 6px 16px;
+  transition: 0.3s;
+}
+.btn-outline-info:hover {
+  background: #A00101 !important;
+  color: #5C0000 !important;
+}
+
+/* ============================================
+   MAIN CONTENT
+============================================ */
+.dashboard-content {
+  flex: 1;
+  overflow-y: auto;
+  padding-top: 120px;
+  padding-bottom: 100px;
+}
+
+.dashboard-content h1 {
+  color: #5C0000;
+}
+
+.dashboard-content p.lead {
+  color: #7A2A2A;
+}
+
+/* ============================================
+   STATS CARDS
+============================================ */
+.dashboard-card {
+  background: #5C0000;
+  border: 1px solid rgba(92,0,0,0.12);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(92,0,0,0.18);
+}
+
+.dashboard-card h5 {
+  color: #eee0e0 ;
+}
+
+.dashboard-card .display-6 {
+  font-weight: 800;
+}
+
+/* Colors for icons / numbers */
+.text-info { color: #eee0e0 !important; }
+.text-success { color: #eee0e0 !important; }
+.text-warning { color: #eee0e0 !important; }
+
+/* Label under number */
+.text-gray {
+  color: #f6e3e3;
+}
+
+/* ============================================
+   OPTION CARDS (Tenants / Users)
+============================================ */
+.option-card {
+  background: #5C0000;
+  border: 1px solid rgba(92,0,0,0.12);
+  border-radius: 18px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.06);
+}
+
+.option-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(92,0,0,0.16);
+}
+
+.option-card h4 {
+  color: #eee0e0;
+}
+
+.option-card p {
+  color: #eee0e0;
+}
+
+/* Buttons */
+.btn-modern {
+  background: #A00101;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  padding: 10px 24px;
+  transition: 0.3s ease;
+  box-shadow: 0 6px 18px rgba(160,1,1,0.25);
+}
+.btn-modern:hover {
+  background: #5C0000;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(160,1,1,0.35);
+}
+
+/* ============================================
+   FOOTER
+============================================ */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background:hwb(0 0% 64%);
+  border-top: 1px solid rgba(92,0,0,0.1);
+  color: #FFF5F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+/* ✅ Profile area (right side) */
+.profile-area{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* ✅ Profile icon button */
+.profile-btn{
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid rgba(160,1,1,0.25);
+  background: #fff;
+  color: #A00101;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  transition: 0.2s ease;
+}
+
+.profile-btn i{
+  font-size: 22px;
+}
+
+.profile-btn:hover{
+  transform: translateY(-1px);
+  border-color: rgba(160,1,1,0.45);
+}
+
+/* ✅ Dropdown menu */
+.profile-menu{
+  position: absolute;
+  top: 52px;
+  right: 0;
+  width: 170px;
+  background: #ffffff;
+  border: 1px solid rgba(92,0,0,0.12);
+  border-radius: 12px;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+  overflow: hidden;
+  z-index: 2000;
+}
+
+/* menu items */
+.menu-item{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-weight: 700;
+  color: #5C0000;
+  cursor: pointer;
+}
+
+.menu-item i{
+  font-size: 16px;
+  color: #A00101;
+}
+
+.menu-item:hover{
+  background: #FFF5F5;
+}
+
+/* logout red */
+.menu-item.danger{
+  color: #b00020;
+}
+.menu-item.danger i{
+  color: #b00020;
+}
