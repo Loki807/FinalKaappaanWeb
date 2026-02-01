@@ -4,12 +4,20 @@
   <div class="container d-flex align-items-center justify-content-between">
 
     <!-- Brand -->
-    <div class="d-flex align-items-center gap-3">
-      <a class="navbar-brand fw-bold fs-4 m-0" href="#">
-        <i class="bi bi-shield-lock me-2 text-info"></i>
-        Kaappaan <span class="text-light"></span>
-      </a>
-    </div>
+  <div class="brand">
+  <button
+    type="button"
+    (click)="toggleMenu()"
+    aria-label="Open menu"
+    style="background: transparent; border: none; cursor: pointer; padding: 8px;"
+  >
+    <i class="bi bi-list" style="font-size: 26px; color: #7b0000;"></i>
+  </button>
+
+  
+  <span style="margin-left: 8px;">Kaappaan <strong>Admin</strong></span>
+</div>
+
 
     <!-- ✅ Right side: Profile icon + dropdown -->
     <div class="profile-area">

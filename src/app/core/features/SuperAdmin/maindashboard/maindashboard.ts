@@ -12,6 +12,12 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./maindashboard.css']
 })
 export class Maindashboard {
+
+  menuOpen = false;
+
+  toggleMenu() { this.menuOpen = !this.menuOpen; }
+  closeMenu() { this.menuOpen = false; }
+
   totalDepartments = 0;
   totalTenants = 0;
   currentYear = new Date().getFullYear();

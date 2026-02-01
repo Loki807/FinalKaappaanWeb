@@ -107,8 +107,9 @@ export class Login {
           case 'fire':
           case 'ambulance':
           case 'traffic':
-            console.log(`👨‍🚒 Responder login (${normalizedRole}) - Redirecting to Tenant Dashboard`);
-            this.router.navigate(['/tenatadminmain']);
+             console.warn('Unknown role:', role);
+               this.message = '🚫 You Cant Access the Webistes ' + role;
+             setTimeout(() => this.router.navigate(['/home']), 1500);
             break;
 
           default:

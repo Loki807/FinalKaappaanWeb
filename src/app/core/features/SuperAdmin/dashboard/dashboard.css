@@ -207,22 +207,22 @@
    UNIVERSITY THEME (Indigo / Violet)
 ============================================ */
 .section.university {
-  background: linear-gradient(135deg, #1e1b4b, #312e81);
+  background: linear-gradient(135deg, #5C0000, #a30000);
   border: 1px solid rgba(79, 70, 229, 0.2);
 }
 
 .section.university:hover {
-  box-shadow: 0 10px 26px rgba(79, 70, 229, 0.3);
+  box-shadow: 0 10px 26px #a30000;
 }
 
 .section.university .count {
-  color: #818cf8;
+  color: #5C0000;
 }
 
 .section.university .section-footer {
   background: #f5f3ff;
-  color: #312e81;
-  border-top: 1px solid rgba(79, 70, 229, 0.1);
+  color: #5C0000;
+  border-top: 1px solid #a30000;
 }
 
 /* ============================================
