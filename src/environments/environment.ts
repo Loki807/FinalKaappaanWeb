@@ -1,7 +1,7 @@
 // src/environments/environment.ts
 export const environment = {
   production: false,
-  apiBase: 'https://localhost:7055/api',
+  apiBase: 'https://uncomplying-carlee-unregurgitated.ngrok-free.dev/api',
 
   // Define the endpoints related to tenants and tenant users
   endpoints: {
