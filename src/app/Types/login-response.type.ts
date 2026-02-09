@@ -1,11 +1,15 @@
 export interface LoginResponse {
- token: string;
-  name: string;
-  role: string;
-  message?: string;
-  requirePasswordChange?: boolean;
+   token: string;
+   name: string;
+   role: string;
+   message?: string;
 
-  tenantId: string;       // from backend
-  tenantName: string;     // from backend
-   // from backend
+   // Custom metadata from backend
+   serviceType?: string;
+   isFirstLogin?: boolean;
+   isEmailConfirmed?: boolean;
+
+   // Optional details if embedded directly
+   tenantId?: string;
+   tenantName?: string;
 }

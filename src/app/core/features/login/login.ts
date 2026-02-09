@@ -53,7 +53,7 @@ export class Login {
         this.loading = false;
 
         // 1️⃣ First-time login → change password
-        if (res.message?.includes('Password change required')) {
+        if (res.isFirstLogin === true || res.message?.includes('Password change required')) {
           this.router.navigate(['/change-password'], {
             queryParams: { email: request.email },
           });
@@ -107,9 +107,9 @@ export class Login {
           case 'fire':
           case 'ambulance':
           case 'traffic':
-             console.warn('Unknown role:', role);
-               this.message = '🚫 You Cant Access the Webistes ' + role;
-             setTimeout(() => this.router.navigate(['/home']), 1500);
+            console.warn('Unknown role:', role);
+            this.message = '🚫 You Cant Access the Webistes ' + role;
+            setTimeout(() => this.router.navigate(['/home']), 1500);
             break;
 
           default:
